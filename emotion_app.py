@@ -4,6 +4,8 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 # Load classifier
+from transformers import pipeline
+classifier = pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base")
 AutoModelForSequenceClassification.from_pretrained("j-hartmann/emotion-english-distilroberta-base")
 AutoTokenizer.from_pretrained("j-hartmann/emotion-english-distilroberta-base")
 
