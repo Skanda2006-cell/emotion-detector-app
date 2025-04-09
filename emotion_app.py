@@ -2,9 +2,10 @@ import streamlit as st
 from transformers import pipeline
 from datetime import datetime
 import matplotlib.pyplot as plt
-
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
 # Load classifier
-classifier = pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base")
+AutoModelForSequenceClassification.from_pretrained("j-hartmann/emotion-english-distilroberta-base")
+AutoTokenizer.from_pretrained("j-hartmann/emotion-english-distilroberta-base")
 
 # Emotion to emoji + color mapping
 emotion_style = {
