@@ -1,4 +1,5 @@
 streamlit
 transformers
-matplotlib
 emoji
+matplotlib
+torch
